@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Modeller ve Gruplar</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+    body {
+      background: url('ARKA_PLAN_FOTO_URL') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .welcome {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 50px;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .welcome h1 { font-size: 40px; margin-bottom: 20px; }
+    .welcome button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: #ff4081;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .models-page, .groups-section {
+      display: none;
+      padding: 40px 20px;
+      background: #111;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      color: #ff4081;
+      margin-bottom: 30px;
+    }
+
+    .model-list, .group-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .model-card, .group-card {
+      background: #222;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 280px;
+      color: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .model-card img, .group-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .card-info {
+      padding: 15px;
+    }
+
+    .card-info h3 {
+      margin-bottom: 10px;
+    }
+
+    .card-info p {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .contact-btn {
+      display: block;
+      width: 100%;
+      background-color: #ff4081;
+      border: none;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 0 0 15px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Giriş -->
+  <div class="welcome">
+    <h1>Hoş Geldin 💋</h1>
+    <p>Modellerimizi ve gruplarımızı görmek için tıklayın</p>
+    <button onclick="showContent()">Modelleri Gör</button>
+  </div>
+
+  <!-- Modeller -->
+  <div class="models-page" id="modelsPage">
+    <h2 class="section-title">Show Yapan Modeller</h2>
+    <div class="model-list">
+      <!-- Model 1 -->
+      <div class="model-card">
+        <img src="https://via.placeholder.com/300x400" alt="Melisa">
+        <div class="card-info">
+          <h3>Melisa</h3>
+          <p>Yaş: 23</p>
+          <p>Enerjik ve sıcak sohbet sever. Gece yayınlarında aktif.</p>
+        </div>
+        <button class="contact-btn">Modele Ulaşmak İçin Tıkla</button>
+      </div>
+
+      <!-- Model 2 -->
+      <div class="model-card">
+        <img src="https://via.placeholder.com/300x400" alt="Aslı">
+        <div class="card-info">
+          <h3>Aslı</h3>
+          <p>Yaş: 21</p>
+          <p>Sakin yapısı ve tatlı diliyle izleyicileri etkiler.</p>
+        </div>
+        <button class="contact-btn">Modele Ulaşmak İçin Tıkla</button>
+      </div>
+
+      <!-- Model 3 -->
+      <div class="model-card">
+        <img src="https://via.placeholder.com/300x400" alt="Zeynep">
+        <div class="card-info">
+          <h3>Zeynep</h3>
+          <p>Yaş: 25</p>
+          <p>Tecrübeli ve kendinden emin yayınlarıyla öne çıkar.</p>
+        </div>
+        <button class="contact-btn">Modele Ulaşmak İçin Tıkla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gruplar -->
+  <div class="groups-section" id="groupsSection">
+    <h2 class="section-title">Gruplarımız</h2>
+    <div class="group-list">
+      <!-- Grup 1 -->
+      <div class="group-card">
+        <img src="https://via.placeholder.com/300x300" alt="Grup 1">
+        <div class="card-info">
+          <h3>🔥 Gece Ateşi Grubu</h3>
+          <p>Geceleri aktif olan en popüler modeller burada. Rahat ortam, özel içerikler.</p>
+        </div>
+      </div>
+
+      <!-- Grup 2 -->
+      <div class="group-card">
+        <img src="https://via.placeholder.com/300x300" alt="Grup 2">
+        <div class="card-info">
+          <h3>💎 VIP Özel Grup</h3>
+          <p>Sadık izleyicilere özel sürpriz içerikler ve birebir sohbet imkanı.</p>
+        </div>
+      </div>
+
+      <!-- Grup 3 -->
+      <div class="group-card">
+        <img src="https://via.placeholder.com/300x300" alt="Grup 3">
+        <div class="card-info">
+          <h3>🌈 Yeni Modeller Grubu</h3>
+          <p>Yeni katılan modellerin tanıtıldığı, keşfetme fırsatları sunan grup.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showContent() {
+      document.querySelector('.welcome').style.display = 'none';
+      document.getElementById('modelsPage').style.display = 'block';
+      document.getElementById('groupsSection').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
